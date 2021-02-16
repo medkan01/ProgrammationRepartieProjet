@@ -34,7 +34,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0">
          <children>
-            <Label text="Joueur 1 :">
+            <Label text="Ordinateur :">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
@@ -42,7 +42,7 @@
             <Label fx:id="lbl_scoreJ1" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" text="0" />
             <Label text="|" />
             <Label fx:id="lbl_scoreJ2" alignment="CENTER_RIGHT" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" text="0" />
-            <Label text=": Joueur 2">
+            <Label text=": Vous">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
@@ -160,13 +160,18 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="600.0">
          <children>
+            <Button fx:id="btn_aide" mnemonicParsing="false" onAction="#aide" text="Aide">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
             <Button fx:id="btn_retour" mnemonicParsing="false" onAction="#retour" text="Retour" />
             <Label text="Cliquez sur une allumette pour la sélectionner / désélectionner">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>
                <HBox.margin>
-                  <Insets left="50.0" right="50.0" />
+                  <Insets left="30.0" right="30.0" />
                </HBox.margin>
             </Label>
             <Button fx:id="btn_valider" mnemonicParsing="false" onAction="#valider" text="Valider" />
