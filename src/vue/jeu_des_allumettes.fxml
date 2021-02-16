@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.JeuAllumetteControleur">
    <children>
       <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
          <children>
@@ -21,10 +20,15 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0">
          <children>
-            <Label fx:id="lbl_tour" alignment="CENTER" contentDisplay="CENTER" text="Tour du joueur :">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Tour du joueur :">
                <font>
                   <Font size="16.0" />
                </font>
+            </Label>
+            <Label fx:id="lbl_tour">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
             </Label>
          </children>
       </HBox>
@@ -35,9 +39,9 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </Label>
-            <Label fx:id="lbl_scoreJ1" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" />
+            <Label fx:id="lbl_scoreJ1" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" text="0" />
             <Label text="|" />
-            <Label fx:id="lbl_scoreJ2" alignment="CENTER_RIGHT" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" />
+            <Label fx:id="lbl_scoreJ2" alignment="CENTER_RIGHT" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" text="0" />
             <Label text=": Joueur 2">
                <HBox.margin>
                   <Insets left="10.0" />
@@ -45,109 +49,109 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="208.0" prefWidth="600.0">
+      <HBox fx:id="pane" alignment="CENTER" prefHeight="208.0" prefWidth="600.0">
          <children>
-            <Button fx:id="allumette1" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette1" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette2" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette2" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette3" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette3" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette4" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette4" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette5" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette5" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette6" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette6" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette7" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette7" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette8" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette8" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette9" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette9" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette10" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette10" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette11" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette11" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette12" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette12" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette13" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette13" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette14" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette14" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette15" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette15" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette16" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette16" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette17" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette17" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette18" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette18" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette19" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette19" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette20" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette20" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="allumette21" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="5.0">
+            <Button fx:id="allumette21" maxHeight="150.0" maxWidth="5.0" minHeight="150.0" minWidth="5.0" mnemonicParsing="false" onAction="#choixAllumette" prefHeight="150.0" prefWidth="5.0">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
@@ -156,15 +160,16 @@
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="600.0">
          <children>
+            <Button fx:id="btn_retour" mnemonicParsing="false" onAction="#retour" text="Retour" />
             <Label text="Cliquez sur une allumette pour la sélectionner / désélectionner">
                <font>
                   <Font name="System Italic" size="12.0" />
                </font>
                <HBox.margin>
-                  <Insets right="50.0" />
+                  <Insets left="50.0" right="50.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="btn_valider" mnemonicParsing="false" text="Valider" />
+            <Button fx:id="btn_valider" mnemonicParsing="false" onAction="#valider" text="Valider" />
          </children>
          <padding>
             <Insets right="10.0" />

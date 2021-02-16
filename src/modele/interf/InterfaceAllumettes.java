@@ -1,4 +1,4 @@
-package jeux.interf;
+package modele.interf;
 
 public interface InterfaceAllumettes {
 	public int initialise();

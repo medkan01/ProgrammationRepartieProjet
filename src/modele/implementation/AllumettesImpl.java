@@ -1,14 +1,14 @@
-package jeux.pojo;
+package modele.implementation;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Random;
 
-import jeux.interf.InterfaceAllumettes;
+import modele.interf.InterfaceAllumettes;
 
-public class Allumettes extends UnicastRemoteObject implements InterfaceAllumettes {
+public class AllumettesImpl extends UnicastRemoteObject implements InterfaceAllumettes {
 
-	protected Allumettes() throws RemoteException {
+	public AllumettesImpl() throws RemoteException {
 		super();
 	}
 	
@@ -16,7 +16,9 @@ public class Allumettes extends UnicastRemoteObject implements InterfaceAllumett
 	// Fonction renvoyant le nombre d'allumettes de départ. Limite d'allumettes fixée à 21. 
 	public int initialise() {
 		Random rand = new Random();
-        int n = rand.nextInt(21)+2;
+        int n = 0;
+        while (n < 3)
+        	n = rand.nextInt(21);
         
         return (n % 2)==0 ? n+1 : n;
 	}
@@ -36,6 +38,7 @@ public class Allumettes extends UnicastRemoteObject implements InterfaceAllumett
 	}
 
 	@Override
+	//Fonction qui ajoute à un joueur le nombre d'allumettes sélectionnées en fonction du tour
 	public int[] compteAllumette(int[] tabScore, int allumettes, int tour) {
 		tabScore[choixCoup(tour)] += allumettes;
 		
