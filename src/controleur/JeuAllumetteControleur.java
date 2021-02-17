@@ -2,11 +2,10 @@ package controleur;
 
 import java.net.URL;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.ResourceBundle;
-import java.util.concurrent.TimeUnit;
 
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -97,8 +96,16 @@ public class JeuAllumetteControleur implements Initializable {
 		
 		System.out.println(tour);
 		
-		if (tour == 0)
-			tourIA();
+		if (tour == 0) {
+			new Thread(() -> {
+				try {
+					Thread.sleep(1200);
+					tourIA();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}).start();
+		}
 			
 		affTourJoueur();
 	}
@@ -119,7 +126,13 @@ public class JeuAllumetteControleur implements Initializable {
 			tabAllumetteRetirer[i] = alluVisibles.get(i);
 		}
 		
-		valider();
+		Platform.runLater(new Runnable() {
+			@Override
+			public void run() {
+				valider();
+			}
+		});
+		
 	}
 	
 	//Fonction qui affiche le joueur qui doit jouer
@@ -127,7 +140,6 @@ public class JeuAllumetteControleur implements Initializable {
 		String str = allumettesImpl.choixCoup(tour) == 0 ? "Ordinateur" : "Vous";
 		this.lbl_tour.setText(str);
 	}
-	
 	
 	@FXML
 	//Fonction appellée lorsqu'un clic de souris est dététcté sur une allumette
@@ -213,7 +225,14 @@ public class JeuAllumetteControleur implements Initializable {
 			btn_valider.setDisable(true);
 			
 			if (tour%2 == 0) {
-				tourIA();
+				new Thread(() -> {
+					try {
+						Thread.sleep(1200);
+						tourIA();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}).start();
 			}
 		}
 	}
