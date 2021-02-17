@@ -94,13 +94,19 @@ public class JeuAllumetteControleur implements Initializable {
 		
 		btn_valider.setDisable(true);
 		
-		System.out.println(tour);
-		
 		if (tour == 0) {
 			new Thread(() -> {
 				try {
+					for (Node node : pane.getChildren().filtered(t->t.isVisible())) {
+						node.setDisable(true);
+					}
+					
 					Thread.sleep(1200);
 					tourIA();
+					
+					for (Node node : pane.getChildren().filtered(t->t.isVisible())) {
+						node.setDisable(false);
+					}
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -225,10 +231,23 @@ public class JeuAllumetteControleur implements Initializable {
 			btn_valider.setDisable(true);
 			
 			if (tour%2 == 0) {
+				/*
+				 * Lorsque c'est le tour de l'ordinateur, on créer un nouveau thread pour pouvoir laisser
+				 * le temps au joueur de voir ce que l'ordinateur à joué.
+				 * Pendant ce temps les allumettes ne sont pas actives pour que le joueur ne puisse pas les sélectionner.
+				 */				
 				new Thread(() -> {
 					try {
+						for (Node node : pane.getChildren().filtered(t->t.isVisible())) {
+							node.setDisable(true);
+						}
+						
 						Thread.sleep(1200);
 						tourIA();
+						
+						for (Node node : pane.getChildren().filtered(t->t.isVisible())) {
+							node.setDisable(false);
+						}
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
