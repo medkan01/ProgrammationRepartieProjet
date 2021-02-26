@@ -44,12 +44,18 @@ Il y a donc deux parties distinctes, le serveur et le client.
 Le serveur va s'occuper d'instancier la classe de chaque jeux et de définir une route d'accès à ces classes. Cela va permettre au client d'accéder et d'utiliser les fonctions associées. Evidemment, ces classes doivent être déclarées dans les interfaces RMI.
 Le serveur contiendra alors :
 * Un package **modele** dans lequel on aura accès au packages :
-    + **interfaceRMI** qui contiendra les interfaces RMI
-    + **pojo** qui contiendra les classes avec le corps des fonctions déclarées dans les interfaces RMI
-* Un package
+    + **interfaceRMI** qui contiendra les interfaces RMI.
+    + **pojo** qui contiendra les classes avec le corps des fonctions déclarées dans les interfaces RMI.
+* Un package **serveur** dans lequel on aura le fichier permettant de lancer le serveur.
 
 #### b. Le Client
-Le client 
+Le client va utiliser les classes instanciées par le serveur afin de gérer la partie interface graphique.
+C'est donc le client qui sera structuré en respectant le modèle MVC.
+Il contiendra alors :
+* Un package **modele** qui contiendra les interfaces RMI
+* Un package **vue** qui contiendra tous les fichiers .fxml
+* Un package **controleur** qui contiendra tous les contrôleurs de chaque fenêtres d'application.
+* Un package **client** qui contiendra le fichier permettant de lancer l'application côté client.
 
 ## IV. Organisation des tâches
 Ce projet est à réaliser à trois, par conséquent, nous avons décidé dans un premier temps d'écrire les interfaces RMI de chaque jeux.
