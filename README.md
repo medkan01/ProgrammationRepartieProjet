@@ -22,20 +22,32 @@ Le Tic-tac-toe se joue sur une grille carrée de 3 × 3 cases. Deux joueurs s’
 Le gagnant est celui qui arrive à aligner trois symboles identiques, horizontalement, verticalement ou en diagonale.
 
 ## 3. Structure du projet
-Le projet doit être réalisé dans le modèle MVC.
+Le projet doit être réalisé dans le modèle MVC. De plus, il faudra être attentif à la structure et l'arborescence du projet en raison de l'utilisation d'interfaces RMI.
 
-#### a. La partie Modèle
+### a. Modèle MVC
+Le modèle MVC est réparti en trois parties distinctes.
+
+#### i. La partie Modèle
 Il s’agit de La partie Jeux qui contient les classes nécessaires pour la réalisation de chaque jeu.
 
-#### b. La partie Vue
+#### ii. La partie Vue
 Cette partie contiendra une interface graphique d’accueil pour le jeu en réseau proposant au joueur de choisir son jeu parmi les jeux proposés. Elle contiendra aussi une interface graphique pour chaque jeu choisi. Ces interfaces peuvent être implémentées de façon indépendante dans un premier temps.
 
-#### c. La partie Contrôle
+#### iii. La partie Contrôle
 Cette partie décrira le lien entre la vue et le traitement proprement dit.
 
-## 4. Organisation des tâches
-Ce projet est à réaliser à trois, par conséquent, nous avons décidé dans un premier temps de programmer un jeu chacun. Cela comprend la partie Modèle, Vue et Contrôle du design pattern du paragraphe 3.
-Le jeu du Pendu sera réalisé par Mehdi.
-Le jeu des allumettes sera réalisé par Luc.
-Le jeu du Tic-Tac-Toe sera réalisé par Esther.
+### b. Interfaces RMI
+Les interfaces RMI vont permettre au client de communiquer avec le serveur et d'utiliser les classes que le serveur propose.
+Il y a donc deux parties distinctes, le serveur et le client.
 
+#### i. Le Serveur
+Le serveur 
+
+## 4. Organisation des tâches
+Ce projet est à réaliser à trois, par conséquent, nous avons décidé dans un premier temps d'écrire les interfaces RMI de chaque jeux.
+Comme nous allons programmer un jeu chacun. Chacun écrira l'interface du jeu qui lui est attribué. Cela comprend la partie Modèle, Vue et Contrôle du design pattern vue au paragraphe 3. Pour l'écriture du programmes des jeux, elle se fera comme suit:
+    * Jeu du Pendu : Mehdi
+    * Jeu des allumettes : Luc
+    * Jeu du Tic-Tac-Toe : Esther
+
+Une fois que le programme de chaque jeux est écrit, On pourra commencer à réaliser la partie Serveur et Client. Ces parties seront réalisées tous ensemble afin d'éviter un quelconque problème d'intégration des jeux.
