@@ -41,13 +41,13 @@ Les interfaces RMI vont permettre au client de communiquer avec le serveur et d'
 Il y a donc deux parties distinctes, le serveur et le client.
 
 #### i. Le Serveur
-Le serveur 
+Le serveur va s'occuper d'instancier la classe de chaque jeux et de définir une route d'accès 
 
 ## 4. Organisation des tâches
 Ce projet est à réaliser à trois, par conséquent, nous avons décidé dans un premier temps d'écrire les interfaces RMI de chaque jeux.
 Comme nous allons programmer un jeu chacun. Chacun écrira l'interface du jeu qui lui est attribué. Cela comprend la partie Modèle, Vue et Contrôle du design pattern vue au paragraphe 3. Pour l'écriture du programmes des jeux, elle se fera comme suit:
-    * Jeu du Pendu : Mehdi
-    * Jeu des allumettes : Luc
-    * Jeu du Tic-Tac-Toe : Esther
+* Jeu du Pendu : Mehdi
+* Jeu des allumettes : Luc
+* Jeu du Tic-Tac-Toe : Esther
 
 Une fois que le programme de chaque jeux est écrit, On pourra commencer à réaliser la partie Serveur et Client. Ces parties seront réalisées tous ensemble afin d'éviter un quelconque problème d'intégration des jeux.
