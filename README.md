@@ -43,9 +43,9 @@ Il y a donc deux parties distinctes, le serveur et le client.
 #### a. Le Serveur
 Le serveur va s'occuper d'instancier la classe de chaque jeux et de définir une route d'accès à ces classes. Cela va permettre au client d'accéder et d'utiliser les fonctions associées. Evidemment, ces classes doivent être déclarées dans les interfaces RMI.
 Le serveur contiendra alors :
-* Un package **modele** dans lequel on aura accès au packages:
-* **interfaceRMI** qui contiendra les interfaces RMI
-* **pojo** qui contiendra les classes avec le corps des fonctions déclarées dans les interfaces RMI
+* Un package **modele** dans lequel on aura accès au packages :
++ **interfaceRMI** qui contiendra les interfaces RMI
++ **pojo** qui contiendra les classes avec le corps des fonctions déclarées dans les interfaces RMI
 * Un package
 
 #### b. Le Client
