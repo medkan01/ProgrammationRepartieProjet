@@ -64,4 +64,6 @@ Comme nous allons programmer un jeu chacun. Chacun écrira l'interface du jeu qu
 * Luc : Jeu des allumettes
 * Esther : Jeu du Tic-Tac-Toe
 
-Une fois que le programme de chaque jeux est écrit, On pourra commencer à réaliser la partie Serveur et Client. Ces parties seront réalisées tous ensemble afin d'éviter un quelconque problème d'intégration des jeux.
+Une fois que le programme de chaque jeux est écrit, on réalisera une serie de tests unitaires pour corriger les problèmes s'il y en a.
+
+Ensuite, on pourra alors commencer à réaliser la partie Serveur et Client. Ces parties seront réalisées par le groupe entier et ensemble afin d'éviter un quelconque problème d'intégration des jeux.
