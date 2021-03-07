@@ -11,10 +11,10 @@ public class Client extends Application{
 
     public void start(Stage primaryStage) {
         try {
-            URL fxmlURL=getClass().getResource("../vue/PenduView.fxml");
+            URL fxmlURL=getClass().getResource("../vue/PenduVue.fxml");
             FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
             Node root = fxmlLoader.load();
-            Scene scene = new Scene((AnchorPane) root, 980, 650);
+            Scene scene = new Scene((AnchorPane) root, 720, 480);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Pendu");
             primaryStage.show();

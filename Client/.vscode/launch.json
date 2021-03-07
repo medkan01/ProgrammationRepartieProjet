@@ -15,9 +15,9 @@
             "name": "Launch Client",
             "request": "launch",
             "mainClass": "client.Client",
-            "projectName": "Client_e2181d3a",
+            "projectName": "Client_26abef17",
             "args": ["localhost", "3000"],
-            "vmArgs": "--module-path \"D:\\1. Cours\\Projets\\ProjetProgRep\\Client\\lib\\javafx-sdk-11.0.2\\lib\" --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web"
+            "vmArgs": "--module-path \"lib\\javafx-sdk-11.0.2\\lib\" --add-modules=javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web"
         }
     ]
 }

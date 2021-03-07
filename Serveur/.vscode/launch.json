@@ -15,7 +15,7 @@
             "name": "Launch Serveur",
             "request": "launch",
             "mainClass": "serveur.Serveur",
-            "projectName": "Serveur_a3e3be5d",
+            "projectName": "Serveur_f1ca2820",
             "args": ["localhost", "3000"]
         }
     ]
